@@ -3,7 +3,7 @@
 Yamdb:
 
 ```
-Проект YaMDb собирает отзывы пользователей на различные произведения.
+Проект YaMDb собирает отзывы пользователей на различные произведения. Произведения делятся на жанры и категории.
 ```
 
 ### Как запустить проект:
@@ -32,4 +32,12 @@ docker-compose up -d --build
 
 ```
 docker-compose exec web python manage.py migrate
+```
+Создать суперпользователя:
+```
+docker-compose exec web python manage.py createsuperuser
+```
+Собрать статику:
+```
+docker-compose exec web python manage.py collectstatic --no-input
 ```
